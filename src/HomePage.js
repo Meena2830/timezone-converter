@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TimezoneList from './TimezoneList';
 import TimezoneSlider from './TimezoneSlider';
 import Header from './Header';
-import HomePage from './HomePage';
-import './App.css';
+import './HomePage.css'; // Ensure this is the correct path
 
-function App() {
+function HomePage() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [timezones, setTimezones] = useState([
     { id: 1, name: 'UTC', offset: 0 },
@@ -34,14 +33,13 @@ function App() {
   };
 
   return (
-    <div className={darkMode ? 'dark-mode' : ''}>
-      <div className="container">
-        <h1 className='heading'>Timezone-Converter</h1>
-        <Header
-          onAddTimezone={addTimezone}
-          onReverseOrder={reverseOrder}
-          onToggleDarkMode={toggleDarkMode}
-        />
+    <div className={`homepage ${darkMode ? 'dark-mode' : ''}`}>
+      <Header
+        onAddTimezone={addTimezone}
+        onReverseOrder={reverseOrder}
+        onToggleDarkMode={toggleDarkMode}
+      />
+      <div className="content">
         <TimezoneSlider time={currentTime} onTimeChange={handleTimeChange} />
         <TimezoneList
           timezones={timezones}
@@ -53,4 +51,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;

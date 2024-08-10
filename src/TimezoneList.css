@@ -1,0 +1,28 @@
+.timezone-list-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .timezone-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .timezone-list-empty {
+    text-align: center;
+    color: #6c757d;
+    font-size: 18px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-mode .timezone-list-empty {
+    background-color: #343a40;
+    color: #ced4da;
+    box-shadow: none;
+  }
+  

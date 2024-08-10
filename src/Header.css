@@ -1,0 +1,83 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .header input[type="text"],
+  .header input[type="number"] {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .header input[type="text"]:focus,
+  .header input[type="number"]:focus {
+    border-color: #007bff;
+  }
+  
+  .header button {
+    padding: 5px 12px;
+    margin-right: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .header button:hover {
+    background-color: #218838;
+  }
+  
+  .header button:last-child {
+    background-color: #343a40;
+  }
+  
+  .header button:last-child:hover {
+    background-color: #23272b;
+  }
+  
+  .dark-mode .header {
+    background-color: #343a40;
+    color: #f8f9fa;
+  }
+  
+  .dark-mode .header input[type="text"],
+  .dark-mode .header input[type="number"] {
+    background-color: #495057;
+    color: white;
+    border: 1px solid #6c757d;
+  }
+  
+  .dark-mode .header input[type="text"]:focus,
+  .dark-mode .header input[type="number"]:focus {
+    border-color: #adb5bd;
+  }
+  
+  .dark-mode .header button {
+    background-color: #17a2b8;
+  }
+  
+  .dark-mode .header button:hover {
+    background-color: #138496;
+  }
+  
+  .dark-mode .header button:last-child {
+    background-color: #6c757d;
+  }
+  
+  .dark-mode .header button:last-child:hover {
+    background-color: #5a6268;
+  }
+  

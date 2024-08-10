@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #343a40;
+  transition: background-color 0.3s, color 0.3s;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+}
+
+.container {
+  width: 100%;
+  
+  max-width: 800px;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #007bff;
   color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 95%;
 }
 
-.App-link {
-  color: #61dafb;
+.header h1 {
+  font-size: 24px;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header button:hover {
+  background-color: #003f7f;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.dark-mode .header {
+  background-color: #6c757d;
+}
+
+.dark-mode .header button {
+  background-color: #495057;
+}
+
+.dark-mode .header button:hover {
+  background-color: #343a40;
+}
+
+/* TimezoneList & TimezoneSlider Styles */
+.timezone-list-container,
+.slider-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dark-mode .timezone-list-container,
+.dark-mode .slider-container {
+  background-color: #495057;
+  box-shadow: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header h1 {
+    margin-bottom: 10px;
   }
+
+  .header button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+.heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
